@@ -9,10 +9,17 @@ from dotenv import load_dotenv
 class EmailSender:
     def __init__(self) -> None:
         load_dotenv()
-        self.remitente = os.getenv('USER')
+        self.remitente = os.getenv('USERNAME')
+        self.password = os.getenv('PASS')
+
+        print(self.password ,  self.remitente)
+
         self.server = smtplib.SMTP('smtp.gmail.com',587)
         self.server.starttls()
-        self.server.login(self.remitente,os.getenv('PASS'))
+        self.server.set_debuglevel(1)
+        self.server.login(self.remitente,self.password)
+        
+
 
     def enviar_correo(self,destinatario , asunto,contenido ,imagen=None ):
         msg = MIMEMultipart()
