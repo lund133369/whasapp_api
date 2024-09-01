@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+ 
+}
+
+h1 {
+    color: #333;
+}
+
+
+.div_1 {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    gap: 2%;
+}
+
+.div_sub {
+    width: 45%;
+    background-color: #bebebe;
+    border: solid 1px black;
+    gap: 50px;
+    padding: 10px;
+}
