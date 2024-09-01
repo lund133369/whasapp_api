@@ -1,7 +1,7 @@
 # Usa una imagen base de Ubuntu 24.04
 FROM ubuntu:24.04
 
-# Establece el directorio de trabajo
+# Establece el directorio de trabajo1
 WORKDIR /app
 
 # Actualiza el sistema e instala dependencias necesarias
